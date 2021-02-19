@@ -5,10 +5,10 @@ const bodyParser = require('body-parser');
 const expressHandleBars = require('express-handlebars')
 
 const app = express();
-
-app.engine('handleBars', expressHandleBars())
+app.set('view engine', 'ejs');
+// app.engine('handleBars', expressHandleBars())
 // app.engine('handleBars', expressHandleBars({layoutsDir: 'views/layouts/', defaultLayout: 'main-layout'}))
-app.set('view engine','handleBars')
+// app.set('view engine','handleBars')
 // app.set('view engine', 'pug'); // Sets data globally to Express application
 app.set('views', path.join(__dirname, "views")); 
 
